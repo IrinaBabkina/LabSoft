@@ -140,7 +140,7 @@ server <- function(input, output, session) {
     base_df<-values$base_df
     showNotification("Изменения сохранены", type ="message" )
     finalDF <- isolate(values[["base_df"]])
-    write.csv(x = finalDF, file = paste0("Base_Littorina_", format(Sys.Date()),".csv"), row.names = F)
+    write.csv(x = finalDF, file = paste0("Base_versions/Base_Littorina_", format(Sys.Date()),".csv"), row.names = F)
   })
   
   #interactive effect of modification----
